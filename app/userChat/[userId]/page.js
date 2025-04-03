@@ -57,7 +57,7 @@ export default function UserChat() {
 
   // Initialize socket connection
   useEffect(() => {
-    const newSocket = io("http://localhost:4500/", {
+    const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_ENDPOINT, {
     });
     setSocket(newSocket);
 
